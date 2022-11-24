@@ -11,7 +11,7 @@ public class Main {
         Util util = new Util();
         util.getConnection();
         UserServiceImpl userService = new UserServiceImpl();
-//        userService.createUsersTable();
+//       userService.createUsersTable();
         userService.dropUsersTable();
 //        userService.saveUser("Ivan", "Petrov", (byte) 25);
 //

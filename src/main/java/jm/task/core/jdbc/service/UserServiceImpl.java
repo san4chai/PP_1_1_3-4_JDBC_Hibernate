@@ -11,7 +11,6 @@ import java.util.List;
 public class UserServiceImpl extends Util implements UserService {
     UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
     Connection connection = getConnection();
-
     User user = new User();
 
     @Override
@@ -26,7 +25,6 @@ public class UserServiceImpl extends Util implements UserService {
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -38,7 +36,6 @@ public class UserServiceImpl extends Util implements UserService {
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
