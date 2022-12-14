@@ -8,16 +8,16 @@ import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        Util util = new Util();
-        util.getConnection();
         UserServiceImpl userService = new UserServiceImpl();
-//       userService.createUsersTable();
-        userService.dropUsersTable();
-//        userService.saveUser("Ivan", "Petrov", (byte) 25);
-//
-//        userService.saveUser("Petr", "Ivanov", (byte) 28);
-//        userService.saveUser("Oleg", "Sidorov", (byte) 30);
-//        userService.saveUser("Fedor", "Petrov", (byte) 32);
+//        userService.createUsersTable();
+//        userService.dropUsersTable();
+        userService.saveUser("Ivan", "Petrov", (byte) 25);
+        userService.saveUser("Petr", "Ivanov", (byte) 28);
+        userService.saveUser("Oleg", "Sidorov", (byte) 30);
+        userService.saveUser("Fedor", "Petrov", (byte) 32);
+//        userService.removeUserById(11);
+//        userService.cleanUsersTable();
+        System.out.println(userService.getAllUsers());
 
     }
 }
